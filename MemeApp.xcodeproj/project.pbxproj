@@ -7,23 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		437EF845292E3F350083E5FA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437EF844292E3F350083E5FA /* NetworkManager.swift */; };
+		437EF849292E5E7B0083E5FA /* MemeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437EF848292E5E7B0083E5FA /* MemeViewCell.swift */; };
 		439AAC86292E23C700FD4709 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439AAC85292E23C700FD4709 /* AppDelegate.swift */; };
 		439AAC88292E23C700FD4709 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439AAC87292E23C700FD4709 /* SceneDelegate.swift */; };
-		439AAC8A292E23C700FD4709 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439AAC89292E23C700FD4709 /* ViewController.swift */; };
+		439AAC8A292E23C700FD4709 /* MemeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439AAC89292E23C700FD4709 /* MemeListViewController.swift */; };
 		439AAC8D292E23C700FD4709 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439AAC8B292E23C700FD4709 /* Main.storyboard */; };
 		439AAC8F292E23CB00FD4709 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 439AAC8E292E23CB00FD4709 /* Assets.xcassets */; };
 		439AAC92292E23CB00FD4709 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439AAC90292E23CB00FD4709 /* LaunchScreen.storyboard */; };
+		439AAC9A292E381D00FD4709 /* MemeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439AAC99292E381D00FD4709 /* MemeApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		437EF844292E3F350083E5FA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		437EF848292E5E7B0083E5FA /* MemeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeViewCell.swift; sourceTree = "<group>"; };
 		439AAC82292E23C700FD4709 /* MemeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		439AAC85292E23C700FD4709 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		439AAC87292E23C700FD4709 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		439AAC89292E23C700FD4709 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		439AAC89292E23C700FD4709 /* MemeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeListViewController.swift; sourceTree = "<group>"; };
 		439AAC8C292E23C700FD4709 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		439AAC8E292E23CB00FD4709 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		439AAC91292E23CB00FD4709 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		439AAC93292E23CB00FD4709 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		439AAC99292E381D00FD4709 /* MemeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		439AAC84292E23C700FD4709 /* MemeApp */ = {
 			isa = PBXGroup;
 			children = (
-				439AAC85292E23C700FD4709 /* AppDelegate.swift */,
-				439AAC87292E23C700FD4709 /* SceneDelegate.swift */,
-				439AAC89292E23C700FD4709 /* ViewController.swift */,
-				439AAC8B292E23C700FD4709 /* Main.storyboard */,
-				439AAC8E292E23CB00FD4709 /* Assets.xcassets */,
-				439AAC90292E23CB00FD4709 /* LaunchScreen.storyboard */,
-				439AAC93292E23CB00FD4709 /* Info.plist */,
+				439AAC9F292E397D00FD4709 /* App */,
+				439AAC9C292E383800FD4709 /* ViewControllers */,
+				439AAC9B292E382500FD4709 /* Models */,
+				439AAC9D292E392100FD4709 /* Storyboards */,
+				439AAC9E292E395C00FD4709 /* Resources */,
+				437EF844292E3F350083E5FA /* NetworkManager.swift */,
 			);
 			path = MemeApp;
+			sourceTree = "<group>";
+		};
+		439AAC9B292E382500FD4709 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				439AAC99292E381D00FD4709 /* MemeApp.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		439AAC9C292E383800FD4709 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				439AAC89292E23C700FD4709 /* MemeListViewController.swift */,
+				437EF848292E5E7B0083E5FA /* MemeViewCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		439AAC9D292E392100FD4709 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				439AAC90292E23CB00FD4709 /* LaunchScreen.storyboard */,
+				439AAC8B292E23C700FD4709 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		439AAC9E292E395C00FD4709 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				439AAC8E292E23CB00FD4709 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		439AAC9F292E397D00FD4709 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				439AAC93292E23CB00FD4709 /* Info.plist */,
+				439AAC85292E23C700FD4709 /* AppDelegate.swift */,
+				439AAC87292E23C700FD4709 /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +187,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				439AAC8A292E23C700FD4709 /* ViewController.swift in Sources */,
+				437EF849292E5E7B0083E5FA /* MemeViewCell.swift in Sources */,
+				439AAC8A292E23C700FD4709 /* MemeListViewController.swift in Sources */,
+				439AAC9A292E381D00FD4709 /* MemeApp.swift in Sources */,
+				437EF845292E3F350083E5FA /* NetworkManager.swift in Sources */,
 				439AAC86292E23C700FD4709 /* AppDelegate.swift in Sources */,
 				439AAC88292E23C700FD4709 /* SceneDelegate.swift in Sources */,
 			);
@@ -289,12 +341,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D22T8YR3ZW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MemeApp/Info.plist;
+				INFOPLIST_FILE = MemeApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +358,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +371,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D22T8YR3ZW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MemeApp/Info.plist;
+				INFOPLIST_FILE = MemeApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,7 +388,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
