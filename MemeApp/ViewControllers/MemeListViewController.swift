@@ -1,15 +1,16 @@
 //
-//  ViewController.swift
+//  ListViewController.swift
 //  MemeApp
 //
-//  Created by Maxim on 23.11.2022.
+//  Created by Maxim on 24.11.2022.
 //
 
 import UIKit
 
-class MemeListViewController: UITableViewController  {
+final class MemeListViewController: UITableViewController {
 
     var memes: [Meme] = []
+    var tests = ["1", "2", "3", "4", "5"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,27 +18,40 @@ class MemeListViewController: UITableViewController  {
 
     }
 
+    // MARK: - Table view data source
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        tests.count
+    }
+
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "memeCell", for: indexPath) as? MemeViewCell
+        else {
+            return UITableViewCell()
+        }
+
+        let meme = memes[indexPath.row]
+        cell.configure(with: meme)
+
+        return cell
+    }
+
+
     private func fetchMemes() {
         NetworkManager.shared.fetchMemes(url: List.url.rawValue) { memes in
             self.memes = memes
         }
     }
-}
+    
 
-extension MemeListViewController {
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        memes.count
+
+    // MARK: - Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? MemeViewCell else {
-            return UITableViewCell()
-        }
 
-        let meme = memes[indexPath.row]
-
-        return cell
-    }
 }
-

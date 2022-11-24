@@ -9,15 +9,11 @@ import UIKit
 
 class MemeViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var upsLabel: UILabel!
+    @IBOutlet var memeImage: UIImageView!
+
+    func configure(with meme: Meme) {
+        titleLabel.text = meme.title
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }
