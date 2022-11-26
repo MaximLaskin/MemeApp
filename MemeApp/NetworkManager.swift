@@ -27,11 +27,10 @@ class NetworkManager {
                 let memeApp = try decoder.decode(MemeApp.self, from: data)
                 completion(memeApp.memes)
             } catch {
-
+                print(error)
             }
         }.resume()
 
     }
-
     private init() {}
 }

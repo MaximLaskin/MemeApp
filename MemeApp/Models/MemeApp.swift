@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct MemeApp: Decodable {
     let memes: [Meme]
 }

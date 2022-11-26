@@ -8,22 +8,17 @@
 import UIKit
 
 final class MemeListViewController: UITableViewController {
-
     var memes: [Meme] = []
-    var tests = ["1", "2", "3", "4", "5"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchMemes()
-
     }
 
     // MARK: - Table view data source
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        tests.count
+       memes.count
     }
-
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "memeCell", for: indexPath) as? MemeViewCell
@@ -37,21 +32,14 @@ final class MemeListViewController: UITableViewController {
         return cell
     }
 
-
     private func fetchMemes() {
         NetworkManager.shared.fetchMemes(url: List.url.rawValue) { memes in
             self.memes = memes
         }
     }
-    
-
-
 
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
     }
-
-
 }
