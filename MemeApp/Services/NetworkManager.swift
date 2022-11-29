@@ -24,10 +24,10 @@ class NetworkManager {
 
             do {
                 let decoder = JSONDecoder()
-                let memeApp = try decoder.decode(MemeApp.self, from: data)
-                completion(memeApp.memes)
+                let memeApp = try decoder.decode([Meme].self, from: data)
+                completion(memeApp)
             } catch {
-                print(error)
+                print("no data")
             }
         }.resume()
 

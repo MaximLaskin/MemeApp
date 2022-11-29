@@ -45,6 +45,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		432431012936AD8E00508662 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				437EF848292E5E7B0083E5FA /* MemeViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		432431022936ADB300508662 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				437EF844292E3F350083E5FA /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		439AAC79292E23C700FD4709 = {
 			isa = PBXGroup;
 			children = (
@@ -65,11 +81,12 @@
 			isa = PBXGroup;
 			children = (
 				439AAC9F292E397D00FD4709 /* App */,
+				432431012936AD8E00508662 /* Views */,
 				439AAC9C292E383800FD4709 /* ViewControllers */,
 				439AAC9B292E382500FD4709 /* Models */,
 				439AAC9D292E392100FD4709 /* Storyboards */,
 				439AAC9E292E395C00FD4709 /* Resources */,
-				437EF844292E3F350083E5FA /* NetworkManager.swift */,
+				432431022936ADB300508662 /* Services */,
 			);
 			path = MemeApp;
 			sourceTree = "<group>";
@@ -87,7 +104,6 @@
 			children = (
 				4338AC60292F836500FA33A6 /* MemeDetailsViewController.swift */,
 				4338AC5E292F737500FA33A6 /* MemeListViewController.swift */,
-				437EF848292E5E7B0083E5FA /* MemeViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";

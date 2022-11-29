@@ -8,7 +8,7 @@
 import UIKit
 
 final class MemeListViewController: UITableViewController {
-    var memes: [Meme] = []
+    private var memes: [Meme] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,11 +35,13 @@ final class MemeListViewController: UITableViewController {
     private func fetchMemes() {
         NetworkManager.shared.fetchMemes(url: List.url.rawValue) { memes in
             self.memes = memes
+            self.tableView.reloadData()
         }
     }
 
     // MARK: - Navigation
-
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }
+     */
 }
