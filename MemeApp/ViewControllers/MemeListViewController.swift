@@ -13,6 +13,7 @@ final class MemeListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchMemes()
+        tableView.rowHeight = 100
     }
 
     // MARK: - Table view data source

@@ -14,20 +14,21 @@ enum List: String {
 class NetworkManager {
     static let shared = NetworkManager()
 
-    func fetchMemes(url: String, completion: @escaping([Meme])  -> Void) {
+    func fetchMemes(url: String, completion: @escaping([Meme]) -> Void) {
         guard let url = URL(string: url) else { return }
 
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data else {
                 return
             }
-
             do {
                 let decoder = JSONDecoder()
-                let memeApp = try decoder.decode([Meme].self, from: data)
-                completion(memeApp)
+                let memeApp = try decoder.decode(MemeApp.self, from: data)
+                DispatchQueue.main.async {
+                    completion(memeApp.memes)
+                }
             } catch {
-                print("no data")
+                print(error)
             }
         }.resume()
 

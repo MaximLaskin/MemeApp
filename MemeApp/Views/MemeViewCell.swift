@@ -15,5 +15,6 @@ class MemeViewCell: UITableViewCell {
 
     func configure(with meme: Meme) {
         titleLabel.text = meme.title
+        upsLabel.text = "\(meme.ups ?? 0)"
     }
 }

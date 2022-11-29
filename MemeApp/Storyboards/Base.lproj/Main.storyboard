@@ -56,13 +56,11 @@
                                         <constraint firstItem="lJ7-Ey-DFf" firstAttribute="leading" secondItem="rmQ-gD-z5p" secondAttribute="trailing" constant="23" id="qJV-Sr-4UP"/>
                                         <constraint firstItem="lJ7-Ey-DFf" firstAttribute="top" secondItem="d7k-tZ-07p" secondAttribute="topMargin" constant="13" id="snl-WY-CLw"/>
                                     </constraints>
-                                    <connections>
-                                        <outlet property="memeImage" destination="rmQ-gD-z5p" id="mo7-AW-PBg"/>
-                                        <outlet property="titleLabel" destination="EjI-uC-a8t" id="OZ8-fF-Vcv"/>
-                                        <outlet property="upsLabel" destination="Sga-vh-xz8" id="pu2-XV-mOS"/>
-                                    </connections>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="memeImage" destination="rmQ-gD-z5p" id="Ws9-Q2-0QH"/>
+                                    <outlet property="titleLabel" destination="EjI-uC-a8t" id="OQV-7v-X7c"/>
+                                    <outlet property="upsLabel" destination="Sga-vh-xz8" id="8Go-uf-1tf"/>
                                     <segue destination="5tE-kt-IQ4" kind="show" id="Bzo-10-rCu"/>
                                 </connections>
                             </tableViewCell>
