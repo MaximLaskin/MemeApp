@@ -12,7 +12,6 @@ struct MemeApp: Decodable {
 }
 
 struct Meme: Codable {
-//    var id = UUID()
     let author: String?
     let title: String?
     let ups: Int?

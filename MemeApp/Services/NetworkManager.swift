@@ -14,7 +14,7 @@ enum List: String {
 class NetworkManager {
     static let shared = NetworkManager()
 
-    func fetchMemes(url: String, completion: @escaping([Meme]) -> Void) {
+    func fetch<T: Decodable>(dataType: T.Type, url: String, completion: @escaping(T) -> Void) {
         guard let url = URL(string: url) else { return }
 
         URLSession.shared.dataTask(with: url) { data, _, error in
@@ -23,9 +23,9 @@ class NetworkManager {
             }
             do {
                 let decoder = JSONDecoder()
-                let memeApp = try decoder.decode(MemeApp.self, from: data)
+                let type = try decoder.decode(T.self, from: data)
                 DispatchQueue.main.async {
-                    completion(memeApp.memes)
+                    completion(type)
                 }
             } catch {
                 print(error)

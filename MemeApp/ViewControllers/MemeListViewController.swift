@@ -34,8 +34,8 @@ final class MemeListViewController: UITableViewController {
     }
 
     private func fetchMemes() {
-        NetworkManager.shared.fetchMemes(url: List.url.rawValue) { memes in
-            self.memes = memes
+        NetworkManager.shared.fetch(dataType: MemeApp.self, url: List.url.rawValue) { memeApp in
+            self.memes = memeApp.memes
             self.tableView.reloadData()
         }
     }
