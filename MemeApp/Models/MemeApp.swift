@@ -6,16 +6,6 @@
 //
 
 import Foundation
-//
-//struct MemeApp: Decodable {
-//    let memes: [Meme]
-//}
-//
-//struct Meme: Codable {
-//    let author: String?
-//    let title: String?
-//    let ups: Int?
-//}
 
 // MARK: - Welcome
 struct MemeApp: Codable {
