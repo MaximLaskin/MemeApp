@@ -7,13 +7,15 @@
 
 import UIKit
 
-class MemeViewCell: UITableViewCell {
+class MemeViewCell: UICollectionViewCell {
 
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var upsLabel: UILabel!
-    @IBOutlet var memeImage: UIImageView!
+    @IBOutlet var imageMemeView: UIImageView!
+    @IBOutlet var nameView: UILabel!
+
 
     func configure(with meme: Meme) {
-        titleLabel.text = meme.name
+        nameView.text = meme.name
     }
+
+   
 }

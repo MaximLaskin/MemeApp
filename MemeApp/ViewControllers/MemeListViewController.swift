@@ -7,26 +7,21 @@
 
 import UIKit
 
-final class MemeListViewController: UITableViewController {
+final class MemeListViewController: UICollectionViewController {
     private var memes: [Meme] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchMemes()
-        tableView.rowHeight = 100
     }
 
-    // MARK: - Table view data source
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       memes.count
+    // MARK: - Collection view data source
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        memes.count
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "memeCell", for: indexPath) as? MemeViewCell
-        else {
-            return UITableViewCell()
-        }
-
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MemeViewCell
         let meme = memes[indexPath.row]
         cell.configure(with: meme)
 
@@ -36,7 +31,8 @@ final class MemeListViewController: UITableViewController {
     private func fetchMemes() {
         NetworkManager.shared.fetch(dataType: MemeApp.self, url: List.url.rawValue) { memeApp in
             self.memes = memeApp.data.memes
-            self.tableView.reloadData()
+            self.collectionView.reloadData()
+
         }
     }
 
