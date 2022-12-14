@@ -14,7 +14,7 @@ class MemeViewCell: UITableViewCell {
     @IBOutlet var memeImage: UIImageView!
 
     func configure(with meme: Meme) {
-        titleLabel.text = meme.title
-        upsLabel.text = "\(meme.ups ?? 0)"
+        titleLabel.text = meme.name
+//        upsLabel.text = "\(meme.ups ?? 0)"
     }
 }

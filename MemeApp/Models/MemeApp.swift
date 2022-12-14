@@ -18,7 +18,7 @@ import Foundation
 //}
 
 // MARK: - Welcome
-struct Welcome: Codable {
+struct MemeApp: Codable {
     let data: DataClass
 }
 

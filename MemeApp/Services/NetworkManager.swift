@@ -9,7 +9,6 @@ import Foundation
 
 enum List: String {
     case url = "https://api.imgflip.com/get_memes"
-    case url2 = "https://meme-api.herokuapp.com/gimme/50"
 }
 
 class NetworkManager {
@@ -32,7 +31,6 @@ class NetworkManager {
                 print(error)
             }
         }.resume()
-
     }
     private init() {}
 }
